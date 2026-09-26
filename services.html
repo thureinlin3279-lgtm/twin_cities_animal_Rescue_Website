@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twin Cities Animal Rescue | Services</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        
+        <h1>Our Services</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Adoption Process</h2>
+            <p>Our adoption process is designed to ensure the best match for both the animal and the adopter. Here is how it works:</p>
+            <ol>
+                <li><strong>Browse:</strong> View our available pets online or visit our adoption center.</li>
+                <li><strong>Meet and Greet:</strong> Schedule a visit to meet the animal and ask questions.</li>
+                <li><strong>Application:</strong> Complete an adoption application with our team.</li>
+                <li><strong>Home Check:</strong> We conduct a brief home visit to ensure a safe environment.</li>
+                <li><strong>Welcome Home:</strong> Finalize the adoption and take your new companion home.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Foster Program</h2>
+            <p>Our foster program provides temporary homes for animals who are not yet ready for adoption. Fosters receive all necessary supplies, veterinary care, and ongoing support from our team.</p>
+            <img src="Image/rescue-volunteer_c.png" alt="A smiling Twin Cities Animal Rescue volunteer in a white t-shirt petting a golden retriever outdoors">
+        </section>
+
+        <section>
+            <h2>Volunteer Opportunities</h2>
+            <ul>
+                <li><strong>Dog Walker:</strong> Provide exercise and socialization for our resident dogs.</li>
+                <li><strong>Cat Care Assistant:</strong> Help feed, clean, and play with our feline residents.</li>
+                <li><strong>Event Helper:</strong> Assist at adoption events, fundraisers, and community outreach.</li>
+                <li><strong>Transport Driver:</strong> Help move animals between shelters, vet appointments, and foster homes.</li>
+            </ul>
+        </section>
+        <section id="findYourRole">
+            <h2>Find Your Volunteer Role</h2>
+            <p>Answer two quick questions and we'll suggest the role that fits you best.</p>
+
+            <label for="availability">Availability:</label>
+            <select id="availability">
+                <option value="">-- Select --</option>
+                <option value="weekdays">Weekdays</option>
+                <option value="weekends">Weekends</option>
+                <option value="evenings">Evenings</option>
+                <option value="flexible">Flexible</option>
+            </select>
+
+            <label for="comfort">Comfort with Animals:</label>
+            <select id="comfort">
+                <option value="">-- Select --</option>
+                <option value="high">High — I love hands-on time</option>
+                <option value="medium">Medium — Some contact is fine</option>
+                <option value="low">Low — I prefer behind-the-scenes</option>
+            </select>
+
+            <button type="button" id="matchBtn">Match Me</button>
+
+            <div id="matchResult" hidden></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Twin Cities Animal Rescue. All rights reserved.</p>
+        <p>123 Rescue Lane, Minneapolis, MN 55401</p>
+    </footer>
+    <script src="script.js" defer></script>
+</body>
+</html>

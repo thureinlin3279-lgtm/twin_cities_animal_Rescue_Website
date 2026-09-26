@@ -1,0 +1,283 @@
+/* ============================================
+   Twin Cities Animal Rescue — styles.css
+   Mobile-first, Flexbox, 4 colors, 2 fonts
+   ============================================ */
+
+/* ---------- Google Fonts ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+
+/* ---------- Design Tokens ---------- */
+:root {
+    --green:   #2E6B4F;
+    --cream:   #FAF7F0;
+    --brown:   #3D2B1F;
+    --peach:   #E8A87C;
+    --white:   #FFFFFF;
+
+    --font-heading: 'Merriweather', Georgia, serif;
+    --font-body:    'Open Sans', Arial, sans-serif;
+
+    --space-sm: 0.75rem;
+    --space-md: 1.5rem;
+    --space-lg: 2.5rem;
+
+    --radius: 8px;
+    --max-width: 1100px;
+}
+
+/* ---------- Reset & Base ---------- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.65;
+    color: var(--brown);
+    background-color: var(--cream);
+    padding: var(--space-md);
+}
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    color: var(--green);
+    line-height: 1.25;
+    margin-bottom: var(--space-sm);
+}
+
+h1 { font-size: 1.6rem; }
+h2 { font-size: 1.4rem; margin-top: var(--space-lg); }
+h3 { font-size: 1.15rem; margin-top: var(--space-md); }
+
+p, ul, ol, figure { margin-bottom: var(--space-md); }
+ul, ol { padding-left: 1.5rem; }
+li { margin-bottom: 0.4rem; }
+
+a {
+    color: var(--green);
+    text-decoration: underline;
+}
+a:hover, a:focus {
+    color: var(--peach);
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+    display: block;
+}
+
+/* ---------- Header & Nav (mobile-first: stacked) ---------- */
+header {
+    background-color: var(--white);
+    padding: var(--space-md);
+    border-radius: var(--radius);
+    margin-bottom: var(--space-lg);
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(61, 43, 31, 0.08);
+}
+
+header img {
+    margin: 0 auto var(--space-sm);
+    width: 100px;
+    height: auto;
+}
+
+header h1 {
+    margin-bottom: var(--space-sm);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    align-items: center;
+}
+
+nav a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--brown);
+    border-radius: var(--radius);
+}
+
+nav a:hover, nav a:focus {
+    background-color: var(--peach);
+    color: var(--white);
+}
+
+/* ---------- Main content ---------- */
+main {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: var(--space-lg);
+}
+
+/* ---------- Figure & figcaption ---------- */
+figure {
+    background-color: var(--white);
+    padding: var(--space-sm);
+    border-radius: var(--radius);
+    box-shadow: 0 2px 6px rgba(61, 43, 31, 0.08);
+}
+
+figcaption {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--brown);
+    margin-top: var(--space-sm);
+    text-align: center;
+}
+
+/* ---------- Forms ---------- */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+.error {
+    display: block;
+    color: #B3261E;
+    font-size: 0.9rem;
+    font-weight: 600;
+    min-height: 1.2em;
+    margin-top: 0.25rem;
+}
+
+input[aria-invalid="true"],
+textarea[aria-invalid="true"] {
+    border-color: #B3261E;
+    background-color: #FDECEA;
+}
+
+#matchResult {
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    background-color: #FFFFFF;
+    border-left: 5px solid #2E6B4F;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(61, 43, 31, 0.08);
+}
+
+.cta-link {
+    display: inline-block;
+    margin-top: 0.75rem;
+    font-weight: 600;
+    color: #2E6B4F;
+}
+fieldset {
+    border: 2px solid var(--green);
+    border-radius: var(--radius);
+    padding: var(--space-md);
+    margin-bottom: var(--space-md);
+    background-color: var(--white);
+}
+
+legend {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--green);
+    padding: 0 0.5rem;
+    font-size: 1.05rem;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.35rem;
+    color: var(--brown);
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 0.65rem;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    border: 1px solid #C9C1B5;
+    border-radius: var(--radius);
+    margin-bottom: var(--space-sm);
+    background-color: var(--cream);
+    color: var(--brown);
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: 3px solid var(--peach);
+    outline-offset: 1px;
+}
+
+button {
+    background-color: var(--green);
+    color: var(--white);
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.85rem 1.75rem;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+}
+
+button:hover, button:focus {
+    background-color: var(--peach);
+    color: var(--brown);
+}
+
+/* ---------- Footer ---------- */
+footer {
+    text-align: center;
+    padding: var(--space-md);
+    background-color: var(--green);
+    color: var(--white);
+    border-radius: var(--radius);
+    margin-top: var(--space-lg);
+    font-size: 0.9rem;
+}
+
+footer p { margin: 0.25rem 0; }
+
+/* ============================================
+   Media Query — tablet & desktop (768px+)
+   ============================================ */
+@media (min-width: 768px) {
+
+    body { padding: var(--space-lg); }
+
+    h1 { font-size: 2.2rem; }
+    h2 { font-size: 1.7rem; }
+
+    /* Horizontal navigation */
+    nav ul {
+        flex-direction: row;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    /* Two-column card layouts for lists inside sections */
+    section ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-md);
+        padding-left: 0;
+        list-style: none;
+    }
+
+    section ul li {
+        flex: 1 1 45%;
+        background-color: var(--white);
+        padding: var(--space-md);
+        border-radius: var(--radius);
+        box-shadow: 0 2px 6px rgba(61, 43, 31, 0.08);
+    }
+
+    /* Wider form breathing room */
+    form { max-width: 700px; }
+
+    /* Video scales up nicely */
+    video { max-width: 720px; margin: 0 auto; }
+}

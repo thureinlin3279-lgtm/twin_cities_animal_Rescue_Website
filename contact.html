@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Twin Cities Animal Rescue | Contact</title>
+</head>
+<body>
+
+    <header>
+        <h1>Contact Us</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Volunteer or Foster Interest Form</h2>
+            <p>Thank you for your interest in supporting Twin Cities Animal Rescue. Please fill out the form below and our volunteer coordinator will contact you within 2 business days.</p>
+
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Your Information</legend>
+
+                    <label for="name">Full Name (required):</label><br>
+                    <input type="text" id="name" name="name" required><br><br>
+                    <span class="error" id="name-error" role="alert"></span><br><br>
+
+                    <label for="email">Email Address (required):</label><br>
+                    <input type="email" id="email" name="email" required><br><br>
+                    <span class="error" id="email-error" role="alert"></span><br><br>
+
+                    <label for="phone">Phone Number (optional):</label><br>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="555-123-4567"><br><br>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Your Interest</legend>
+
+                    <label for="interest">I am interested in (required):</label><br>
+                    <select id="interest" name="interest" required>
+                        <option value="">-- Select an option --</option>
+                        <option value="volunteer">Volunteering</option>
+                        <option value="foster">Fostering</option>
+                        <option value="adoption">Adoption Information</option>
+                    </select><br><br>
+
+                    <label for="availability">Availability (required):</label><br>
+                    <select id="availability" name="availability" required>
+                        <option value="">-- Select availability --</option>
+                        <option value="weekdays">Weekdays</option>
+                        <option value="weekends">Weekends</option>
+                        <option value="evenings">Evenings</option>
+                        <option value="flexible">Flexible</option>
+                    </select><br><br>
+
+                    <label for="experience">Experience with Pets (required):</label><br>
+                    <textarea id="experience" name="experience" rows="4" cols="50" required placeholder="Tell us about your experience with dogs, cats, or other animals..."></textarea><br><br>
+                    <span class="error" id="experience-error" role="alert"></span><br><br>
+
+                    <label for="message">Short Message (optional):</label><br>
+                    <textarea id="message" name="message" rows="4" cols="50" placeholder="Anything else you'd like us to know?"></textarea><br><br>
+                </fieldset>
+
+                <button type="submit">Submit Interest Form</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Service Area</h2>
+            <p>We proudly serve the entire Minneapolis–Saint Paul metropolitan area, including Hennepin, Ramsey, Dakota, Anoka, and Washington counties.</p>
+        </section>
+
+        <section>
+            <h2>Office Hours</h2>
+            <ul>
+                <li>Monday–Friday: 9:00 AM – 6:00 PM</li>
+                <li>Saturday: 10:00 AM – 4:00 PM</li>
+                <li>Sunday: Closed</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Twin Cities Animal Rescue. All rights reserved.</p>
+        <p>123 Rescue Lane, Minneapolis, MN 55401</p>
+    </footer>
+    <script src="script.js" defer></script>
+</body>
+</html>
